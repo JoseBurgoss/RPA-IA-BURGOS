@@ -2,8 +2,8 @@ import pandas as pd
 from twilio.rest import Client
 import matplotlib.pyplot as plt
 
-account_sid = 'AC45ae07a2e090e21a6ce8024700e38dd3'
-auth_token = '0d210a195c31c53c3e165694edb52ce2'
+account_sid = ''
+auth_token = ''
 client = Client(account_sid, auth_token)
 
 lista_meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio']
@@ -18,7 +18,7 @@ for mes in lista_meses:
     ventas = tabla_ventas.loc[idx_max, 'Ventas']
     message = client.messages.create(
         from_='whatsapp:+14155238886',
-        to='whatsapp:+584140629243',
+        to='',
         body=f'En el mes de {mes}, {vendedor} llevo a cabo mas ventas, Ventas: {ventas}$'
     )
     print(message.sid)
