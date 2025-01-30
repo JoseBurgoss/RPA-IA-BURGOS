@@ -11,7 +11,7 @@ vendedores = []
 ventas_totales = []
 
 for mes in lista_meses:
-    tabla_ventas = pd.read_excel(f'RPA-Burgos/Ventas/{mes}.xlsx')
+    tabla_ventas = pd.read_excel(f'RPA-IA-BURGOS/Ventas/{mes}.xlsx')
     
     idx_max = tabla_ventas['Ventas'].idxmax()
     vendedor = tabla_ventas.loc[idx_max, 'Vendedor']
@@ -41,7 +41,7 @@ plt.show()
 
 ventas_por_mes = []
 for mes in lista_meses:
-    tabla_ventas = pd.read_excel(f'RPA-Burgos/Ventas/{mes}.xlsx')
+    tabla_ventas = pd.read_excel(f'RPA-IA-BURGOS/Ventas/{mes}.xlsx')
     ventas_mes = tabla_ventas['Ventas'].sum()
     ventas_por_mes.append(ventas_mes)
 
